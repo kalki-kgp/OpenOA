@@ -63,7 +63,9 @@ export function YawAnalysis() {
         </button>
       </section>
 
-      {loading ? <LoadingOverlay label="Running yaw analysis" /> : null}
+      {loading ? (
+        <LoadingOverlay label="Running yaw analysis. This can take a bit of time, please do not worry." />
+      ) : null}
       {error ? <p className="error-text">{error}</p> : null}
 
       <section className="split-grid">

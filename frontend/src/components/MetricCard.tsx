@@ -1,5 +1,3 @@
-import { motion } from 'framer-motion'
-
 export function MetricCard({
   title,
   value,
@@ -12,15 +10,10 @@ export function MetricCard({
   subtitle?: string
 }) {
   return (
-    <motion.article
-      className={`metric-card ${accent}`}
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.45 }}
-    >
+    <article className={`metric-card ${accent}`}>
       <p className="metric-title">{title}</p>
       <p className="metric-value">{value}</p>
       {subtitle ? <p className="metric-subtitle">{subtitle}</p> : null}
-    </motion.article>
+    </article>
   )
 }

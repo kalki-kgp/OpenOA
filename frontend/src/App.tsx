@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { AnimatePresence, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 import { Sidebar } from './components/Sidebar'
 import { AEPAnalysis } from './pages/AEPAnalysis'
@@ -10,17 +10,7 @@ import { PowerCurves } from './pages/PowerCurves'
 import { YawAnalysis } from './pages/YawAnalysis'
 
 function RouteShell({ children }: { children: React.ReactNode }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 12 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -8 }}
-      transition={{ duration: 0.35, ease: 'easeOut' }}
-      className="route-shell"
-    >
-      {children}
-    </motion.div>
-  )
+  return <div className="route-shell">{children}</div>
 }
 
 export default function App() {
