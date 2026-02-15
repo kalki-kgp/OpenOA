@@ -1,0 +1,9 @@
+.git
+.gitignore
+.cursor
+skills
+**/__pycache__
+**/*.pyc
+frontend/node_modules
+frontend/dist
+node_modules
